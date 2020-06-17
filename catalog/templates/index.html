@@ -1,21 +1,40 @@
 {% extends "base_generic.html" %}
+<head>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
 
 {% block content %}
-  <h1>Local Library Home Page</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Jia Yu</em>!</p>
+  
 
-  <h2>Dynamic content</h2>
-  <p>The library has the following record counts:</p>
+  <div class='jumbotron text-center'>
+    <h1>Local Library Home Page</h1>
+    <p>Welcome to LocalLibrary, a website developed by <em>Jia Yu</em>!</p>
+  </div>
+  
+  <div class='text-center'>
+        <h2>What's Brewin?</h2>
+  </div>
+  
+  <div class='record_container'>
+    <h3>Record:</h3>
+
   <ul>
-    <li><strong>Books:</strong> {{ num_books }}</li>
-    <li><strong>Copies:</strong> {{ num_instances }}</li>
-    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> {{ num_authors }}</li>
-    <li><strong>Genres:</strong> {{ num_genres }}</li>
+  
+    <br><strong>Books:</strong> {{ num_books }}</br>
+    <br><strong>Copies:</strong> {{ num_instances }}</br>
+    <br><strong>Copies available:</strong> {{ num_instances_available }}</br>
+    <br><strong>Authors:</strong> {{ num_authors }}</br>
+    <br><strong>Genres:</strong> {{ num_genres }}</br>
+   
     
   </ul>
-
-  <p>You have visited this page {{ num_visits }} {% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+  </div>
+  
+  <div class="session_count">
+    <p>You have visited this page {{ num_visits }} {% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+  </div>
+  
 {% endblock %}
 
 

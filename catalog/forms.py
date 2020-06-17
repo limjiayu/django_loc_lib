@@ -21,6 +21,18 @@ class RenewBookForm(forms.Form):
         # Remember to always return the cleaned data.
         return data
 
+from django.db import models
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+
+class RegistrationForm(UserCreationForm):
+    email = models.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
+
 # from django.forms import ModelForm
 
 # from catalog.models import BookInstance

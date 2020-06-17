@@ -1,5 +1,82 @@
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+html, body {
+    height: 100%;
 }
+
+.navigation_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: whitesmoke;
+    
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+h1 {
+    font-family: Serif;
+    border-bottom: 1px solid black;
+    
+    
+}
+
+
+
+p {
+    font-family: verdana;
+    font-size: 15px;
+    
+}
+
+.overlay {
+    background: #00000063;
+    height: 100%;
+    overflow: auto;
+}
+
+.background {
+    background: url(../desk2.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: auto;
+  
+
+}
+
+.text-center {
+    color: #805a4c;
+    font-family: serif;
+}
+
+.record_container {
+    margin: 20px;
+    padding: 50;
+    text-align: right;
+    color: whitesmoke;
+    line-height: 1;
+}
+
+.session_count {
+    text-align: right;
+    color: darkgray;
+}
+
+.registration {
+    color: whitesmoke
+}
+
+td {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.details {
+    color: whitesmoke;
+}
+
+
+

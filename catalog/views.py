@@ -156,3 +156,24 @@ class AuthorDelete(DeleteView):
     model = Author
     # redirects to author list after an author has been deleted
     success_url = reverse_lazy('authors')
+
+
+# Registration Page
+# from django.contrib.auth import login, authenticate
+# from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import redirect
+from .forms import RegistrationForm
+def RegistrationPage(request):
+
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+                # this automatically check for duplicates and password hashing 
+                # no need to do anything extra
+            return redirect('index')
+            
+
+    form = RegistrationForm()
+    context = {'form': form}
+    return render(request, 'registration/user_registration.html', context)

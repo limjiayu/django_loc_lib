@@ -32,6 +32,13 @@ urlpatterns += [
     path('author/<int:pk>/update/', views.AuthorUpdate.as_view(), name='author_update'),
     path('author/<int:pk>/delete/', views.AuthorDelete.as_view(), name='author_delete'),
 ]
+
+# registration page
+urlpatterns += [
+    path('register/', views.RegistrationPage, name='user_create'),
+    path('register/confirmation/', views.RegistrationPage, name='user_confirmation'),
+    ] 
+
 # url pattern: empty string
 # view function to be called if the URL pattern is detected: 
 # views.index -> index() function in views.py
